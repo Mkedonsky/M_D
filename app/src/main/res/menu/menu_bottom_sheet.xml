@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".BottomSheetActivity">
+    <item
+        android:id="@+id/av_action_img_OK"
+        android:icon="@drawable/ic_baseline_check_24"
+        android:title=""
+        app:showAsAction="always">
+    </item>
+    <item
+        android:id="@+id/av_action_img_Close"
+        android:icon="@drawable/ic_baseline_close_24"
+        android:title=""
+        app:showAsAction="ifRoom">
+    </item>
+</menu>

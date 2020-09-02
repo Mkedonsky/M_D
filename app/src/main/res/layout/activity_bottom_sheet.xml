@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".BottomSheetActivity">
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary">
+        </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/inputLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        app:counterEnabled="true"
+        app:counterMaxLength="20"
+        app:counterOverflowTextAppearance="@style/CounterStyle"
+        app:errorEnabled="true"
+        app:hintTextAppearance="@style/EditTextHintStyle">
+
+        <EditText
+            android:id="@+id/editText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Введите имя:"
+            android:theme="@style/EditTextStyle" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <include layout="@layout/bottom_sheet" />
+
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/baseline_add_white_24dp"
+        android:backgroundTint="@color/colorPrimary"
+        android:layout_margin="16dp"
+        android:theme="@style/PrimaryActionButton"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        app:rippleColor="@color/colorPrimaryDark"
+        app:layout_anchor="@+id/bottom_sheet"
+        app:layout_anchorGravity="top|end" />
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
